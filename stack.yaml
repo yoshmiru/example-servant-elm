@@ -6,7 +6,7 @@ packages:
 extra-deps:
   - servant-elm-0.7.2
   #- elm-bridge-0.5.2
-  - wai-make-assets-0.2
+  #- wai-make-assets-0.2
 
 nix:
   enable: true

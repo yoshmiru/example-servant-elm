@@ -7,7 +7,6 @@ import           Control.Monad.IO.Class
 import           Control.Monad.Trans.Except
 import           Data.Map
 import           Network.Wai
-import           Network.Wai.MakeAssets
 import           Servant
 
 import           Api
@@ -17,17 +16,14 @@ type WithAssets = Api :<|> Raw
 withAssets :: Proxy WithAssets
 withAssets = Proxy
 
-options :: Options
-options = Options "client"
-
 app :: IO Application
 app = serve withAssets <$> server
 
 server :: IO (Server WithAssets)
 server = do
-  assets <- serveAssets options
+  let assets = serveDirectoryFileServer "assets"
   db     <- mkDB
-  return (apiServer db :<|> Tagged assets)
+  return (apiServer db :<|> assets)
 
 apiServer :: DB -> Server Api
 apiServer db = listItems db :<|> getItem db :<|> postItem db :<|> deleteItem db
