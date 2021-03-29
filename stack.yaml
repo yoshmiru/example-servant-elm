@@ -1,10 +1,10 @@
-resolver: lts-16.16
+resolver: lts-17.8
 
 packages:
 - '.'
 
 extra-deps:
-  #- servant-elm-0.6.0.2
+  - servant-elm-0.7.2
   #- elm-bridge-0.5.2
   - wai-make-assets-0.2
 

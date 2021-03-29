@@ -5,6 +5,13 @@
 
 packages:
 - completed:
+    hackage: servant-elm-0.7.2@sha256:27e45a456ad56ba59502549a59ce66f7229a17bbce72c413cbf8615ed074d754,4579
+    pantry-tree:
+      size: 2081
+      sha256: 4b10f1da950fea1a0bcaf74a9e68dc0a1c0136e8c09a136b9c3f6c89e09ad21a
+  original:
+    hackage: servant-elm-0.7.2
+- completed:
     hackage: wai-make-assets-0.2@sha256:c27822194ab5f203edbc51270c8e796af4e5172023ffde68ff479e715bde75c1,2028
     pantry-tree:
       size: 417
@@ -13,7 +20,7 @@ packages:
     hackage: wai-make-assets-0.2
 snapshots:
 - completed:
-    size: 532380
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/16/16.yaml
-    sha256: d6b004b095fe2a0b8b14fbc30014ee97e58843b9c9362ddb9244273dda62649e
-  original: lts-16.16
+    size: 565720
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/8.yaml
+    sha256: 76bf8992ff8dfe6eda9c02f81866138c2369344d5011ab39ae403457c4448b03
+  original: lts-17.8
